@@ -1,0 +1,2 @@
+# odoo
+sskj_odoo
