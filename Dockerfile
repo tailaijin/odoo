@@ -1,6 +1,7 @@
 FROM debian:stretch
 MAINTAINER Odoo S.A. <info@odoo.com>
 
+# add some
 # Generate locale C.UTF-8 for postgres and general locale data
 ENV LANG C.UTF-8
 
