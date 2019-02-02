@@ -32,7 +32,7 @@ RUN set -x; \
             xfonts-base \
             apt-utils \
         && curl -o wkhtmltox.deb -SL https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.stretch_amd64.deb \
-        && echo '7e35a63f9db14f93ec7feeb0fce76b30c08f2057 wkhtmltox.deb' | sha1sum -c - \
+        #&& echo '7e35a63f9db14f93ec7feeb0fce76b30c08f2057 wkhtmltox.deb' | sha1sum -c - \
         && dpkg --force-depends -i wkhtmltox.deb\
         && apt-get -y install -f --no-install-recommends \
         && rm -rf /var/lib/apt/lists/* wkhtmltox.deb
@@ -42,7 +42,7 @@ ENV ODOO_VERSION 12.0
 ENV ODOO_RELEASE 20190130
 RUN set -x; \
         curl -o odoo.deb -SL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}.${ODOO_RELEASE}_all.deb \
-        && echo '30fb8530c596d5606b079c45f1be15f423431fdd odoo.deb' | sha1sum -c - \
+        #&& echo '30fb8530c596d5606b079c45f1be15f423431fdd odoo.deb' | sha1sum -c - \
         && dpkg --force-depends -i odoo.deb \
         && apt-get update \
         && apt-get -y install -f --no-install-recommends \
